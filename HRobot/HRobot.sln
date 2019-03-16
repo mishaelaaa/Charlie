@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HRobot", "..\HRobot\HRobot\HRobot.pyproj", "{FA757E0A-35C5-450C-BAA2-5712EE176E18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA757E0A-35C5-450C-BAA2-5712EE176E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA757E0A-35C5-450C-BAA2-5712EE176E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E988BD1-DEB9-4B72-A51A-627CFD7EEC15}
+	EndGlobalSection
+EndGlobal
