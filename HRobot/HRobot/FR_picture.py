@@ -4,33 +4,26 @@ import cv2
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
-#this is the cascade we just made. Call what you want
-female_cascade = cv2.CascadeClassifier('Emotional_Face_Female.xml')
-
 cap = cv2.VideoCapture(0)
 
-while 1:
+while True:
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-    
-    # add this
-    # image, reject levels level weights.
-    female = female_cascade.detectMultiScale(gray, 50, 50)
-    
-    # add this
-    for (x,y,w,h) in watches:
-        cv2.rectangle(img,(x,y),(x+w,y+h),(255,255,0),2)
-
-    for (x,y,w,h) in faces:
-        cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
-
+    faces = face_cascade.detectMultiScale(gray, scaleFactor = 1.5, minNeighbors =5)
         
+    # add this
+    for (x,y,w,h) in faces:
+        cv2.rectangle(img,(x,y),(x+w,y+h),(255,255,0),2)
         roi_gray = gray[y:y+h, x:x+w]
         roi_color = img[y:y+h, x:x+w]
+        img_item = "my_face.png"
+        cv2.imwrite(img_item, roi_gray)
         eyes = eye_cascade.detectMultiScale(roi_gray)
+        print("x,y,w,h", x,y,w,h)
+
         for (ex,ey,ew,eh) in eyes:
             cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
+            print("ex,ey,ew,eh", ex,ey,ew,eh)
 
     cv2.imshow('img',img)
     k = cv2.waitKey(30) & 0xff

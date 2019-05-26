@@ -23,6 +23,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="faces.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Face_Detection.py">
       <SubType>Code</SubType>
     </Compile>
@@ -31,8 +34,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Emotional_Face_Female.xml" />
+    <Content Include="Emotional_Face.xml" />
     <Content Include="environment.yml" />
+    <Content Include="face-trainner.yml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.7" />
