@@ -5,7 +5,7 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 #this is the cascade we just made. Call what you want
-watch_cascade = cv2.CascadeClassifier('watchcascade10stage.xml')
+female_cascade = cv2.CascadeClassifier('Emotional_Face_Female.xml')
 
 cap = cv2.VideoCapture(0)
 
@@ -16,7 +16,7 @@ while 1:
     
     # add this
     # image, reject levels level weights.
-    watches = watch_cascade.detectMultiScale(gray, 50, 50)
+    female = female_cascade.detectMultiScale(gray, 50, 50)
     
     # add this
     for (x,y,w,h) in watches:
