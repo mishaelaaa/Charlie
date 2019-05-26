@@ -23,12 +23,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CameraCalibration.py">
+    <Compile Include="Face_Detection.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FR_picture.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="environment.yml" />
+    <Content Include="Timeline 1.20190526184022.xml" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.7" />
