@@ -23,6 +23,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="calibration.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="emotion_recognition.py" />
     <Compile Include="faces.py">
       <SubType>Code</SubType>
     </Compile>
